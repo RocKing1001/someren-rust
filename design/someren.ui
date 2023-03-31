@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <requires lib="gtk" version="4.6"/>
+  <requires lib="libadwaita" version="1.1"/>
+  <object class="AdwApplicationWindow">
+    <property name="maximized">True</property>
+    <property name="title">Someren</property>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="AdwHeaderBar"/>
+        </child>
+        <child>
+          <object class="AdwViewSwitcher">
+            <property name="stack">stack</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwViewStack" id="stack">
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="child">
+                  <object class="GtkButton">
+                    <property name="halign">center</property>
+                    <property name="label">Hello World</property>
+                    <property name="valign">center</property>
+                    <property name="vexpand">True</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

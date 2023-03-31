@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cambalache-project SYSTEM "cambalache-project.dtd">
+<cambalache-project version="0.10.3" target_tk="gtk-4.0">
+  <ui>
+	(4,None,None,"someren.ui",None,None,None,None,None,None)
+  </ui>
+  <object>
+	(4,1,"AdwApplicationWindow",None,None,None,None,None,None),
+	(4,2,"GtkBox",None,1,None,None,None,-1),
+	(4,3,"AdwHeaderBar",None,2,None,None,None,None),
+	(4,4,"AdwViewSwitcher",None,2,None,None,None,1),
+	(4,5,"AdwViewStack","stack",2,None,None,None,2),
+	(4,6,"AdwViewStackPage",None,5,None,None,None,None),
+	(4,7,"GtkButton",None,6,None,None,None,None),
+	(4,8,"AdwViewSwitcherTitle","ADWT",2,None,None,None,3)
+  </object>
+  <object_property>
+	(4,1,"GtkWindow","maximized","True",None,None,None,None,None),
+	(4,1,"GtkWindow","title","Someren",None,None,None,None,None),
+	(4,2,"GtkOrientable","orientation","vertical",None,None,None,None,None),
+	(4,3,"AdwHeaderBar","title-widget","8",None,None,None,None,None),
+	(4,4,"AdwViewSwitcher","stack","5",None,None,None,None,None),
+	(4,6,"AdwViewStackPage","child",None,None,None,None,None,7),
+	(4,7,"GtkButton","label","Hello World",None,None,None,None,None),
+	(4,7,"GtkWidget","halign","center",None,None,None,None,None),
+	(4,7,"GtkWidget","valign","center",None,None,None,None,None),
+	(4,7,"GtkWidget","vexpand","True",None,None,None,None,None)
+  </object_property>
+</cambalache-project>
