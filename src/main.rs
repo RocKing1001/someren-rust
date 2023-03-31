@@ -14,9 +14,7 @@ fn main() -> glib::ExitCode {
 
 fn build_ui(app: &Application) {
     // Create a button with label and margins
-    let button = gtk::Button::builder()
-        .label("Dashboard")
-        .build();
+    let button = gtk::Button::builder().label("Dashboard").build();
 
     let content = gtk::Box::builder()
         .orientation(Orientation::Vertical)
@@ -24,20 +22,39 @@ fn build_ui(app: &Application) {
 
     let stack = adw::ViewStack::builder().build();
 
-    stack.add_titled_with_icon(&gtk::Label::new(Some("Rooms")), Some("People"), "People", "money-clip-symbolic");
-    stack.add_titled_with_icon(&gtk::Label::new(Some("Rooms")), Some("Rooms"), "Rooms", "Page 2");
-    stack.add_titled_with_icon(&gtk::Label::new(Some("Activities")), Some("Activities"), "Activities", "Page 2");
-    stack.add_titled_with_icon(&gtk::Label::new(Some("Shop")), Some("Shop"), "Shop", "Page 2");
+    stack.add_titled_with_icon(
+        &gtk::Label::new(Some("Rooms")),
+        Some("People"),
+        "People",
+        "money-clip-symbolic",
+    );
+    stack.add_titled_with_icon(
+        &gtk::Label::new(Some("Rooms")),
+        Some("Rooms"),
+        "Rooms",
+        "Page 2",
+    );
+    stack.add_titled_with_icon(
+        &gtk::Label::new(Some("Activities")),
+        Some("Activities"),
+        "Activities",
+        "Page 2",
+    );
+    stack.add_titled_with_icon(
+        &gtk::Label::new(Some("Shop")),
+        Some("Shop"),
+        "Shop",
+        "Page 2",
+    );
 
     stack.set_vexpand(true);
 
     let v = adw::ViewSwitcher::builder()
         .policy(adw::ViewSwitcherPolicy::Wide)
-        .stack(&stack).build();
-
-    let header = adw::HeaderBar::builder().title_widget(&v)
-        .decoration_layout("icon:minimize,maximize,close")
+        .stack(&stack)
         .build();
+
+    let header = adw::HeaderBar::builder().title_widget(&v).build();
 
     header.pack_start(&button);
 
